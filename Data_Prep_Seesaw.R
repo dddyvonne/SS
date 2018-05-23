@@ -6,9 +6,7 @@ gs_auth(token = NULL, new_user = TRUE,
         secret = getOption("googlesheets.client_secret"),
         cache = getOption("googlesheets.httr_oauth_cache"), verbose = TRUE)
 
-gs_gap() %>% 
-  gs_copy(to = "Seesaw Daily_R")
-gap <- gs_title("Seesaw Daily_R")
+gap <- gs_key("1Uw6I0_i-UHjGtQr1o4PyU6EvYK3__dd5_2qlXLxsOA8")
 
 LCV_media <- data.frame(gs_read(gap, "LEVEL 2", range = "B4:R30"))
 PP_media <- data.frame(gs_read(gap, "LEVEL 2", range = "T4:AJ30"))
